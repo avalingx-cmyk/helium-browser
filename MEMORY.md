@@ -24,7 +24,7 @@
 
 | Phase | Name | Status | Notes |
 |---|---|---|---|
-| 0 | Project Setup & Architecture | 🔄 In Progress | Folder structure created |
+| 0 | Project Setup & Architecture | ✅ Complete | Folder structure created |
 | 1 | Core WebView Browser Shell | ⬜ Not Started | |
 | 2 | Tab Management | ⬜ Not Started | |
 | 3 | Address Bar & Navigation | ⬜ Not Started | |
@@ -54,8 +54,20 @@
 - [x] `lib/core/database/isar_service.dart` with Isar initialization
 - [x] Placeholder screens for all features
 - [x] `README.md` created
-- [ ] Git repository initialized
-- [ ] First commit to `develop` branch
+- [x] Git repository initialized
+- [x] First commit to `develop` branch
+
+## 📋 Phase 1 Checklist (Core WebView)
+
+- [ ] `flutter_inappwebview` integrated
+- [ ] Basic page loading works
+- [ ] Loading indicator implemented
+- [ ] Error page implemented
+- [ ] Back/forward navigation works
+- [ ] Page refresh works
+- [ ] WebView controller service
+- [ ] Page state model (Freezed)
+- [ ] Browser provider (Riverpod)
 
 ---
 
