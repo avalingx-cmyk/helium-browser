@@ -95,6 +95,9 @@
 - [x] FilterListLoader for asset loading
 - [x] AdBlockerProvider (Riverpod)
 - [x] Blocked count tracking
+- [x] **EasyList filter rules (88,531 rules)**
+- [x] **EasyPrivacy filter rules (56,144 rules)**
+- [x] **YouTube adblock scriptlet**
 
 ## 📋 Phase 5 Checklist (Bookmarks & History) - ✅ COMPLETE
 
