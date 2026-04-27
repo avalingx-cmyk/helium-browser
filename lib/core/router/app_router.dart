@@ -7,6 +7,8 @@ import '../../features/bookmarks/presentation/bookmarks_screen.dart';
 import '../../features/history/presentation/history_screen.dart';
 import '../../features/settings/presentation/settings_screen.dart';
 
+// CONST AUDIT: ✅ Can be const - Provider with GoRouter, no runtime changes.
+// Creates router once at startup, static configuration.
 final appRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     initialLocation: '/',

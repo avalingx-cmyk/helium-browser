@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// CONST AUDIT: ✅ Can be const - Static theme methods, no instance state.
+// AppTheme provides static ThemeData getters for light/dark modes.
 class AppTheme {
   static ThemeData get light {
     return ThemeData(
