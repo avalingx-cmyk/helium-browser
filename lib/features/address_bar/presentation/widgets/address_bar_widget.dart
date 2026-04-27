@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/providers/address_bar_provider.dart';
 import '../../../../core/utils/url_utils.dart';
 
+// CONST AUDIT: ❌ Cannot be const - ConsumerStatefulWidget with dynamic callbacks.
+// Uses Riverpod ref.watch and TextEditingController.
 class AddressBarWidget extends ConsumerStatefulWidget {
   final String? initialUrl;
   final String? title;

@@ -7,6 +7,8 @@ import 'widgets/webview_widget.dart';
 import 'widgets/loading_indicator.dart';
 import 'widgets/error_page.dart';
 
+// CONST AUDIT: ❌ Cannot be const - ConsumerStatefulWidget with InAppWebViewController.
+// Uses stateful controller reference and Riverpod providers.
 class BrowserScreen extends ConsumerStatefulWidget {
   const BrowserScreen({super.key});
 

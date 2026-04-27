@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../domain/models/browser_tab.dart';
 
+// CONST AUDIT: ✅ Can be const - no dynamic dependencies in constructor.
+// StatelessWidget with all parameters provided at build time.
 class TabCard extends StatelessWidget {
   final BrowserTab tab;
   final bool isActive;

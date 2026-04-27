@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/utils/url_utils.dart';
 
+// CONST AUDIT: ✅ Can be const - ConsumerWidget with no dynamic state.
+// Uses ref.watch but constructor is stateless.
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 

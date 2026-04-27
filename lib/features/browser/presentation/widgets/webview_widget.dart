@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
+// CONST AUDIT: This widget has dynamic callbacks and cannot be const.
+// Consider wrapping with RepaintBoundary for performance.
 class HeliumWebView extends StatelessWidget {
   final String initialUrl;
   final Function(InAppWebViewController controller)? onWebViewCreated;
@@ -23,7 +25,10 @@ class HeliumWebView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InAppWebView(
+    // PERFORMANCE: WebView wrapped in RepaintBoundary to isolate repaints
+    // from parent widgets. This prevents unnecessary repaints when toolbar updates.
+    return RepaintBoundary(
+      child: InAppWebView(
       initialUrlRequest: URLRequest(
         url: WebUri(initialUrl),
       ),
@@ -49,6 +54,7 @@ class HeliumWebView extends StatelessWidget {
         }
         return NavigationActionPolicy.CANCEL;
       },
+    ),
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// CONST AUDIT: ❌ Cannot be const - `onRetry` is a Function callback.
+// Widget is Stateless but contains dynamic behavior via callback.
 class ErrorPage extends StatelessWidget {
   final String message;
   final VoidCallback onRetry;

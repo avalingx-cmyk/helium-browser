@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../data/history_repository.dart';
 import '../domain/models/history_entry.dart';
 
+// CONST AUDIT: ✅ Can be const - ConsumerWidget with FutureProvider.
+// Constructor is stateless, rebuilds only on provider updates.
 final historyProvider = FutureProvider<List<HistoryEntry>>((ref) async {
   return await HistoryRepository.instance.getRecent(limit: 100);
 });

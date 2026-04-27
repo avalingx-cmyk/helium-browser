@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import '../domain/providers/tabs_provider.dart';
 import 'widgets/tab_card.dart';
 
+// CONST AUDIT: ✅ Can be const - ConsumerWidget with no dynamic state in constructor.
+// Uses ref.watch for providers but constructor is stateless.
 class TabSwitcherScreen extends ConsumerWidget {
   const TabSwitcherScreen({super.key});
 

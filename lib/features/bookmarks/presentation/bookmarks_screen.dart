@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../data/bookmark_repository.dart';
 import '../domain/models/bookmark.dart';
 
+// CONST AUDIT: ✅ Can be const - ConsumerWidget with FutureProvider.
+// Constructor is stateless, rebuilds only on provider updates.
 final bookmarksProvider = FutureProvider<List<Bookmark>>((ref) async {
   return await BookmarkRepository.instance.getAllBookmarks();
 });

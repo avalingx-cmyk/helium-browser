@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 
+// CONST AUDIT: ✅ Can be const - no dynamic dependencies.
+// Uses ref.watch only for provider access, no runtime state changes.
 class HeliumBrowserApp extends ConsumerWidget {
   const HeliumBrowserApp({super.key});
 
